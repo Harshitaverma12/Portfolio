@@ -1,0 +1,117 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo span { color: var(--accent3); }
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 200px;
+  line-height: 1.5;
+}
+
+.footer-links-group {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.footer-col a {
+  font-size: 0.88rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .footer-inner { padding: 2.5rem 1.5rem 1.5rem; flex-direction: column; gap: 2rem; }
+  .footer-bottom { padding: 1.2rem 1.5rem; flex-direction: column; gap: 0.8rem; text-align: center; }
+}
+
+.footer-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--accent3);
+  border: 1px solid rgba(63,255,210,0.3);
+  border-radius: var(--radius-full);
+  padding: 0.45rem 1rem;
+  background: rgba(63,255,210,0.05);
+  transition: all 0.2s;
+  font-weight: 500;
+  width: fit-content;
+}
+.footer-resume-btn:hover {
+  background: rgba(63,255,210,0.12);
+  border-color: rgba(63,255,210,0.55);
+  transform: translateY(-1px);
+}

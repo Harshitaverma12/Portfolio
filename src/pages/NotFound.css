@@ -1,0 +1,25 @@
+.notfound {
+  min-height: 80vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 3rem;
+  position: relative; z-index: 1;
+}
+
+.nf-code {
+  font-family: var(--font-head);
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: 800; letter-spacing: -8px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+  animation: gradShift 4s ease infinite;
+  background-size: 200%;
+}
+
+.nf-title {
+  font-family: var(--font-head); font-size: 2rem; font-weight: 800;
+  margin: 1rem 0 0.8rem;
+}
+.nf-sub { color: var(--muted); font-size: 1rem; font-weight: 300; max-width: 360px; margin-bottom: 2.5rem; }
+.nf-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }

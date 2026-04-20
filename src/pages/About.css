@@ -1,0 +1,102 @@
+.about-page { min-height: 100vh; position: relative; z-index: 1; }
+.about-h1 { font-size: clamp(2.4rem, 4vw, 4rem); }
+
+.about-intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.about-avatar {
+  position: relative;
+  width: 140px; height: 140px;
+  flex-shrink: 0;
+}
+
+.avatar-ring {
+  position: absolute; inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: rotateBorder 4s linear infinite;
+}
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.avatar-inner {
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center;
+}
+
+.avatar-initials {
+  font-family: var(--font-head);
+  font-size: 2.2rem; font-weight: 800;
+  color: #fff; letter-spacing: -1px;
+}
+
+.about-bio { display: flex; flex-direction: column; gap: 1rem; }
+.about-bio p { color: var(--muted); font-size: 1rem; line-height: 1.8; font-weight: 300; }
+.about-bio p:first-child { color: var(--text); font-size: 1.05rem; }
+
+.about-actions { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+
+/* TIMELINE */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.tl-item { position: relative; padding-bottom: 2.5rem; }
+.tl-dot {
+  position: absolute; left: -2.45rem; top: 0.25rem;
+  width: 10px; height: 10px;
+  border-radius: 50%; border: 2px solid var(--accent);
+  background: var(--bg); transition: all 0.3s;
+}
+.tl-item:hover .tl-dot { background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+.tl-date { font-size: 0.75rem; color: var(--accent3); letter-spacing: 1px; margin-bottom: 0.4rem; }
+.tl-role { font-family: var(--font-head); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.2rem; }
+.tl-co { font-size: 0.88rem; color: var(--accent); margin-bottom: 0.5rem; }
+.tl-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; font-weight: 300; max-width: 520px; }
+
+/* VALUES */
+.values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; }
+.value-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.8rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.value-card:hover { border-color: rgba(124,109,250,0.3); transform: translateY(-3px); }
+.value-icon { font-size: 1.4rem; color: var(--accent); margin-bottom: 1rem; display: block; }
+.value-title { font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.value-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+@media (max-width: 700px) {
+  .about-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .about-avatar { margin: 0 auto; }
+}
+
+.edu-grid { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; }
+.edu-card {
+  display: flex; align-items: flex-start; gap: 1.2rem;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 1.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.edu-card:hover { border-color: rgba(124,109,250,0.3); transform: translateX(4px); }
+.edu-icon { font-size: 1.3rem; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.edu-degree { font-family: var(--font-head); font-weight: 700; font-size: 1rem; margin-bottom: 0.25rem; }
+.edu-school { font-size: 0.88rem; color: var(--accent); margin-bottom: 0.4rem; }
+.edu-meta { display: flex; gap: 1rem; font-size: 0.78rem; color: var(--muted); }
+.edu-score { background: rgba(124,109,250,0.12); color: #a89fff; padding: 0.1rem 0.5rem; border-radius: 100px; }
