@@ -191,7 +191,6 @@ function TaskThumb() {
 }
 
 export default function Home() {
-  const counterRef = useCounterAnimation();
   const projRef = useScrollAnimation();
   useEffect(() => {
     window.scrollTo(0, 0);

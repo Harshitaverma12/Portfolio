@@ -4,8 +4,6 @@ import "./Resume.css";
 
 export default function Resume() {
   const heroRef = useScrollAnimation();
-  const [pdfLoaded, setPdfLoaded] = useState(false);
-  const [pdfError, setPdfError] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
